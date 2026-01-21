@@ -21,16 +21,22 @@ const translations = {
     hours: {
       title: "Hours",
       days: {
-        tueThu: "Tue – Thu",
-        friSat: "Fri – Sat",
-        sun: "Sun",
         mon: "Mon",
+        tue: "Tue",
+        wed: "Wed",
+        thu: "Thu",
+        fri: "Fri",
+        sat: "Sat",
+        sun: "Sun",
       },
       times: {
-        tueThu: "6:00 PM – 1:00 AM",
-        friSat: "6:00 PM – 3:00 AM",
-        sun: "6:00 PM – 12:00 AM",
-        mon: "Closed",
+        mon: "7:30 PM – 3:00 AM",
+        tue: "7:30 PM – 3:00 AM",
+        wed: "7:30 PM – 3:00 AM",
+        thu: "7:30 PM – 3:00 AM",
+        fri: "7:30 PM – 3:00 AM",
+        sat: "7:30 PM – 3:00 AM",
+        sun: "7:30 PM – 3:00 AM",
       },
       note: "Hours may change on holidays. For private events, please contact us.",
     },
@@ -77,16 +83,22 @@ const translations = {
     hours: {
       title: "営業時間",
       days: {
-        tueThu: "火〜木",
-        friSat: "金・土",
-        sun: "日",
         mon: "月",
+        tue: "火",
+        wed: "水",
+        thu: "木",
+        fri: "金",
+        sat: "土",
+        sun: "日",
       },
       times: {
-        tueThu: "18:00 – 1:00",
-        friSat: "18:00 – 3:00",
-        sun: "18:00 – 0:00",
-        mon: "定休日",
+        mon: "19:30 – 3:00",
+        tue: "19:30 – 3:00",
+        wed: "19:30 – 3:00",
+        thu: "19:30 – 3:00",
+        fri: "19:30 – 3:00",
+        sat: "19:30 – 3:00",
+        sun: "19:30 – 3:00",
       },
       note: "祝日は営業時間が変更になる場合があります。貸切のご相談はお問い合わせください。",
     },
@@ -337,7 +349,7 @@ export default function SnackHanabi() {
 
           <div style={styles.hoursCard}>
             <div style={styles.hoursGrid}>
-              {["tueThu", "friSat", "sun", "mon"].map((key) => (
+              {["mon", "tue", "wed", "thu", "fri", "sat", "sun"].map((key) => (
                 <div key={key} style={styles.hoursRow}>
                   <span style={styles.hoursDay}>{t.hours.days[key]}</span>
                   <span style={styles.hoursDots} />
@@ -367,7 +379,7 @@ export default function SnackHanabi() {
           </h2>
 
           <div className="reservation-grid" style={styles.reservationGrid}>
-            <div style={styles.formCard}>
+            {/* <div style={styles.formCard}>
               {formSubmitted ? (
                 <div style={styles.confirmationMessage}>
                   <span style={styles.confirmationIcon}>✓</span>
@@ -472,12 +484,12 @@ export default function SnackHanabi() {
                   </button>
                 </form>
               )}
-            </div>
+            </div> */}
 
             <div style={styles.contactCard}>
               <h3 style={styles.contactTitle}>{t.reservation.contact.title}</h3>
 
-              <div style={styles.contactItem}>
+              {/* <div style={styles.contactItem}>
                 <span style={styles.contactIcon}>☎</span>
                 <div>
                   <span style={styles.contactLabel}>
@@ -485,7 +497,7 @@ export default function SnackHanabi() {
                   </span>
                   <span style={styles.contactValue}>+81 3-1234-5678</span>
                 </div>
-              </div>
+              </div> */}
 
               <div style={styles.contactItem}>
                 <span style={styles.contactIcon}>✉</span>
@@ -493,7 +505,7 @@ export default function SnackHanabi() {
                   <span style={styles.contactLabel}>
                     {t.reservation.contact.email}
                   </span>
-                  <span style={styles.contactValue}>info@snackhanabi.jp</span>
+                  <span style={styles.contactValue}>manila.snack.hanabi@gmail.com</span>
                 </div>
               </div>
 
@@ -505,8 +517,8 @@ export default function SnackHanabi() {
                   </span>
                   <span style={styles.contactValue}>
                     {lang === "en"
-                      ? "1-2-3 Ginza, Chuo-ku, Tokyo 104-0061"
-                      : "〒104-0061 東京都中央区銀座1-2-3"}
+                      ? "Building Penthouse, Amorsolo corner Creekside, Unit 19-20, Legazpi Street, Village, Makati City, 1229 Metro Manila"
+                      : "フィリピン・マニラ首都圏 マカティ市（Makati City）1229／レガスピ・ヴィレッジ（Legazpi Village） レガスピ通り ユニット19-20（アモルソロ通り×クリークサイド角）ビル・ペントハウス"}
                   </span>
                 </div>
               </div>
@@ -1101,6 +1113,8 @@ const styles = {
 
   // Contact Card
   contactCard: {
+    // maxWidth: "600px",
+    margin: "0 auto",
     background:
       "linear-gradient(135deg, rgba(15,15,15,0.8) 0%, rgba(10,10,10,0.9) 100%)",
     border: "1px solid rgba(201, 169, 98, 0.1)",
