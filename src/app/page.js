@@ -489,15 +489,15 @@ export default function SnackHanabi() {
             <div style={styles.contactCard}>
               <h3 style={styles.contactTitle}>{t.reservation.contact.title}</h3>
 
-              {/* <div style={styles.contactItem}>
+              <div style={styles.contactItem}>
                 <span style={styles.contactIcon}>☎</span>
                 <div>
                   <span style={styles.contactLabel}>
                     {t.reservation.contact.phone}
                   </span>
-                  <span style={styles.contactValue}>+81 3-1234-5678</span>
+                  <span style={styles.contactValue}>(028) 811-6889</span>
                 </div>
-              </div> */}
+              </div>
 
               <div style={styles.contactItem}>
                 <span style={styles.contactIcon}>✉</span>
@@ -517,8 +517,8 @@ export default function SnackHanabi() {
                   </span>
                   <span style={styles.contactValue}>
                     {lang === "en"
-                      ? "Building Penthouse, Amorsolo corner Creekside, Unit 19-20, Legazpi Street, Village, Makati City, 1229 Metro Manila"
-                      : "フィリピン・マニラ首都圏 マカティ市（Makati City）1229／レガスピ・ヴィレッジ（Legazpi Village） レガスピ通り ユニット19-20（アモルソロ通り×クリークサイド角）ビル・ペントハウス"}
+                      ? "Creekside Building Penthouse, unit 19-21 Legaspi, Village, Makati City, 1229 Metro Manila"
+                      : "Creekside Building Penthouse, unit 19-21 Legaspi, Village, Makati City, 1229 Metro Manila"}
                   </span>
                 </div>
               </div>
